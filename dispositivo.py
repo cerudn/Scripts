@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys, subprocess
 # Autor albceru
+#Se necesita tener nmap instalado
 
 import commands
 import subprocess
