@@ -2,6 +2,7 @@
 import sys, subprocess
 # Autor albceru
 #Se necesita tener nmap instalado
+#Detecta dispositivos en la red wifi 
 
 import commands
 import subprocess
@@ -23,12 +24,14 @@ ips.append(gateway)
 print gateway + " Router"
 print ip +" Mi dispositivo"
 numeros=0
-text =''
+
 for numero in lineas:
 	numeros += 1
+
 	if not numero in ips:
-		text = numero +"\n"
+
+		print numero
 
 
 
-print text+"dispositivos conectados a la red "+ str(numeros)
+print "dispositivos conectados a la red "+ str(numeros)
