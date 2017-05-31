@@ -11,14 +11,14 @@ import subprocess
 
 entrada =-1
 while entrada is -1:
-    print "Introduce 0 para obtener las ip y el numero de dispositivos que hay en la red"
+    print "Introduce 0 para obtener las ip y el número de dispositivos que hay en la red"
     print "Introduce 1 para comprobar si hay intrusos "
     entrada = input()
 
     if entrada != 0 and entrada !=1 :
         entrada =-1
         print "Introduce 1 o 0 \n"
-    print "\n"    
+    print "\n"
 mac_amigas = []
 ips =[]
 archivo = open("mac_amigas","r")
