@@ -6,12 +6,17 @@ import subprocess
 
 #Autor albceru
 #Programa para detectar intrusos en la red, si la mac no coincide con las almacenadas por el usuario en mac_amigas
-#Rellenar mac_amigas con las mac que se conozcan. Ejemplo mac_amigas = ['xx:xx:xx:xx:xx:xx'] donde xx son los valores de la mac
+#Rellenar archivo mac_amigas con las mac que se conozcan poniendo una mac por línea   .
 #Se necesita tener instalado nmap
 
-
 mac_amigas = []
+archivo = open("mac_amigas","r")
 
+for mac in archivo.readlines():
+    mac_amigas.append(mac[:-1])
+
+
+archivo.close()
 gateway_red= commands.getoutput('route | grep default|awk \'{print $2 "#"$8}\'')
 gateway_red=gateway_red.split("\n")[0]
 
